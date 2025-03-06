@@ -8,8 +8,9 @@ function getKeys(obj) {
   return Object.keys(obj);
 }
 
-// Testing the function
-console.log(getKeys(student)); // Output: ["name"]
+// Correct Testing Usage
+const keys = getKeys(student); // Pass the object to the function
+console.log(keys); // Output: ["name"]
 
 // Additional Example
 const studentWithMoreProps = {
@@ -18,4 +19,5 @@ const studentWithMoreProps = {
   city: "New York",
 };
 
-console.log(getKeys(studentWithMoreProps)); // Output: ["name", "age", "city"]
+const moreKeys = getKeys(studentWithMoreProps); // Pass the object to the function
+console.log(moreKeys); // Output: ["name", "age", "city"]
