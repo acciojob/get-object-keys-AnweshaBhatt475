@@ -1,45 +1,21 @@
-// Person Class
-class Person {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
+// Create the student object
+const student = {
+  name: "John",
+};
 
-  greet() {
-    console.log(`Hello, my name is ${this.name}, I am ${this.age} years old.`);
-  }
+// Function to get all keys from the object
+function getKeys(obj) {
+  return Object.keys(obj);
 }
 
-// Employee Class
-class Employee extends Person {
-  constructor(name, age, jobTitle) {
-    super(name, age); // Call the parent class (Person) constructor
-    this.jobTitle = jobTitle;
-  }
+// Testing the function
+console.log(getKeys(student)); // Output: ["name"]
 
-  jobGreet() {
-    console.log(
-      `Hello, my name is ${this.name}, I am ${this.age} years old, and my job title is ${this.jobTitle}.`
-    );
-  }
-}
+// Additional Example
+const studentWithMoreProps = {
+  name: "John",
+  age: 20,
+  city: "New York",
+};
 
-// Student Class
-class Student extends Person {
-  study() {
-    console.log(`${this.name} is studying.`);
-  }
-}
-
-// Teacher Class
-class Teacher extends Person {
-  teach() {
-    console.log(`${this.name} is teaching.`);
-  }
-}
-
-// Expose classes globally for Cypress
-window.Person = Person;
-window.Employee = Employee;
-window.Student = Student;
-window.Teacher = Teacher;
+console.log(getKeys(studentWithMoreProps)); // Output: ["name", "age", "city"]
